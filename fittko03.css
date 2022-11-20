@@ -1,0 +1,142 @@
+body {
+	width: 1000px
+	}
+	
+@font-face {
+	font-family: QuaverSerif;
+	src: url('QuaverSerif.otf');
+}
+
+/* 
+Uses css3's opacity property to set a delay on appearence of various items. This transform will keep things "invisible" until they are called, and they will appear relatively quickly regardless of the animation length. 
+*/
+@-webkit-keyframes txt {
+	0%{-webkit-transform:scale(1);opacity:0;}
+	90%{-webkit-transform:scale(1);opacity:0;}
+	100%{-webkit-transform:scale(1);opacity:1;}
+	}
+	
+/*
+This animation is a variant delay; I can store images and blocks of text "offstage" --outside of the page/frame area-- until they are required. Reuse of this block is simply a matter of adjusting the directions and distances.
+*/
+@-webkit-keyframes outr {
+    from {
+   	 top: 3000px;
+   	 }
+    to {
+   	 top: 700px;
+   	 }
+    }
+	
+/*
+The two background images, for day one and day two. The d2 image calls on the opacity transform 34 second into page load, and appears on a higher z-index level (like a stack of photoshop layers).
+*/
+img.d1 {
+	position:absolute;
+	width:960px; height:665px;
+	left:0;
+	top:0;
+	z-index:-2;
+	}
+
+img.d2 {
+	-webkit-animation-name: txt;
+	-webkit-animation-duration:34s;
+	-webkit-animation-iteration-count:1;
+	position:absolute;
+	width:960px; height:665px;
+	left:0px;
+	top:0px;
+	z-index:0;
+	}
+	
+
+img.talk {
+	-webkit-animation-name: txt;
+	-webkit-animation-duration:6s;
+	-webkit-animation-iteration-count:1;
+	position:absolute;
+	width:280px; height:310px;
+	left:450px;
+	top:90px;
+	z-index:-1;
+	}
+	
+img.talk2 {
+	-webkit-animation-name: txt;
+	-webkit-animation-duration:42s;
+	-webkit-animation-iteration-count:1;
+	position:absolute;
+	left:430px;
+	top:98px;
+	z-index:2;
+	}
+	
+p.intro {
+	position:absolute;
+	background-color: rgb(233,229,195);
+	padding:1.2em;
+	width:883px;
+	margin:-1.4em 2em 1em 2em;
+	font-family: QuaverSerif, Helvetica, Verdana, sans-serif;
+	font-size:18px;
+	line-height:1.4em;
+    left:0px;
+    top:13.8px;
+    z-index:-1;
+	}
+	
+p.day1out {
+	-webkit-animation-name: outr;
+	-webkit-animation-duration:10s;
+	-webkit-animation-iteration-count:1;
+	position:absolute;
+	background-color: rgb(233,229,195);
+	padding:1.2em;
+	width:380px;
+	margin:-1.4em 2em 1em 2em;
+	font-family: QuaverSerif, Helvetica, Verdana, sans-serif;
+	font-size:18px;
+	line-height:1.4em;
+    left:0px;
+    top:470px;
+    z-index:-1;
+	}
+	
+p.day2 {
+	-webkit-animation-name: outr;
+	-webkit-animation-duration:33s;
+	-webkit-animation-iteration-count:1;
+	position:absolute;
+	background-color: rgb(233,229,195);
+	padding:1.2em;
+	width:330px;
+	margin:-1.4em 2em 1em 2em;
+	font-family: QuaverSerif, Helvetica, Verdana, sans-serif;
+	font-size:18px;
+	line-height:1.4em;
+    left:40px;
+    top:20px;
+    z-index:1;
+	}
+	
+p.day2out {
+	-webkit-animation-name: outr;
+	-webkit-animation-duration:46s;
+	-webkit-animation-iteration-count:1;
+	position:absolute;
+	background-color: rgb(233,229,195);
+	padding:1.2em;
+	width:380px;
+	margin:-1.4em 2em 1em 2em;
+	font-family: QuaverSerif, Helvetica, Verdana, sans-serif;
+	font-size:18px;
+	line-height:1.4em;
+    left:-20px;
+    top:470px;
+    z-index:2;
+	}
+		
+a {
+    color:#ce614a;
+    }

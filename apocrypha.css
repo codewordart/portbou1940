@@ -1,0 +1,47 @@
+@font-face {
+	font-family: QuaverSerif;
+	src: url('QuaverSerif.otf');
+}
+
+body {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8D8F83), color-stop(2, #D9CDBF));
+	background-image: -ms-linear-gradient(top, #8D8F83 50%, #D9CDBF 200%);
+	background-image: -moz-linear-gradient(top, #8D8F83 50%, #D9CDBF 200%);
+	background-image: -o-linear-gradient(top, #8D8F83 50%, #D9CDBF 200%);
+}
+
+#frame { 
+	width: 1100px; 
+	margin: 60px auto; 
+}
+	
+#frame div {
+	float: left;
+	width:22%;
+	height: 660px;
+	overflow: hidden;
+}
+
+#frame:hover div { width: 80px;
+}
+
+#frame:hover div:hover {
+	width: 510px;
+	overflow: auto;
+}
+
+img.h {
+	width:500px;height:412px;
+}
+img.v {
+	width:500px;height:640px;
+}
+
+img.stamp {
+	float:right;
+	position:absolute;
+	right:-60px; top:280px;
+	width:250; 
+	opacity:.3;
+	z-index:1;
+}

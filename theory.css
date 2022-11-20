@@ -1,0 +1,184 @@
+	
+@font-face {
+	font-family: QuaverSerif;
+	src: url('QuaverSerif.otf');
+}
+
+/* define custom animations */
+@-webkit-keyframes faded {
+	0%{-webkit-transform:scale(1);opacity:.5;}
+	40%{-webkit-transform:scale(1.1);opacity:.7;}
+	70%{-webkit-transform:scale(.8);opacity:.9;}
+	100%{-webkit-transform:scale(1);opacity:.6;}
+}
+
+@-webkit-keyframes scroll {
+	from {
+		left: 600px;
+		}
+	to {
+		left: -700px;
+		}
+	}
+
+@-webkit-keyframes flick {
+        0% {
+                opacity: .1;
+        }
+        30% {
+                opacity: .5;
+        }	
+        70% {
+                opacity: .2;
+        }	
+        90% {
+                opacity: .6;
+        }		
+}
+
+@-webkit-keyframes worn {
+	from {
+		color: rgb(250,250,250);
+		}
+	to {
+		color: rgb(208,209,189);
+		}
+	}
+	
+@-webkit-keyframes bumpg {
+	from {
+		left: -100px;
+		}
+	to {
+		left: 250px;
+		}
+	}
+	
+@-webkit-keyframes bumpf {
+	from {
+		left: 600px;
+		}
+	to {
+		left: 250px;
+		}
+	}
+	
+	
+/* layout */
+#navlist {
+	padding: 4em 6em;
+	margin:  0;
+}
+
+#navlist li {
+	list-style-type: none;
+	margin: 0;
+	padding: 1.25em;
+}
+
+#navlist li a {
+	font: 22px "QuaverSerif", "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	text-decoration: none; 
+	list-style-type: none;
+	color: #ce614a;
+}
+
+#navlist li a.content {		
+	font: 22px "QuaverSerif", "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	margin:20px 0 0 0;
+	text-decoration: 	none; 
+	list-style-type: none;
+	padding:0;
+}
+
+#navlist ul {
+	list-style-type: none;
+}
+
+
+/* text styles */
+h2 {
+	font: 22px "QuaverSerif", "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	margin:20px 0 0 0;
+}
+
+span.h2 {
+	font: 22px "QuaverSerif", "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	margin:20px 0 0 0;
+}
+p {
+    font: 20px "QuaverSans", "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+    letter-spacing:.11em;
+    line-height:1.2em;
+   	margin:0;
+}
+
+
+/* animations */
+.faded {
+	-webkit-animation-name: faded;
+	-webkit-animation-duration:33s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+   	left:8px;
+}
+
+.scroll {
+	-webkit-animation: scroll 40s infinite alternate;
+  	position: relative;
+  	opacity: .6;
+}
+
+.xscroll {
+	-webkit-animation-name: scroll;
+	-webkit-animation-duration:40s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-delay:4s;
+  	position: relative;
+  	left:1100px;
+  	opacity: .6;
+}
+
+.flick {
+	-webkit-animation-name: flick;
+	-webkit-animation-duration:1.3s;
+	-webkit-animation-iteration-count:infinite;
+}
+
+.xflick {
+	-webkit-animation-name: flick;
+	-webkit-animation-duration:2.1s;
+	-webkit-animation-iteration-count:infinite;
+}
+
+.worn {
+	-webkit-animation-name: worn;
+	-webkit-animation-duration:8s;
+	-webkit-animation-iteration-count:infinite;
+	text-shadow: 4px 1px 4px rgba(133,116,122,.6), 3px 3px 5px rgba(141,143,131,.3); 
+}
+
+.xworn {
+	-webkit-animation-name: worn;
+	-webkit-animation-duration:6s;
+	-webkit-animation-delay:4s;
+	-webkit-animation-iteration-count:infinite;
+	text-shadow: 4px 1px 4px rgba(133,116,122,.6), 3px 3px 5px rgba(141,143,131,.3); 
+	color:rgb(255,255,255);
+}
+
+.bumpg {
+	-webkit-animation: bumpg 20s infinite alternate;
+	position:absolute;
+	opacity:.4;
+	padding:1.2em;
+}
+
+.bumpf {
+	-webkit-animation: bumpf 20s infinite alternate;
+	position:absolute;
+	opacity:.4;
+	padding:1.2em;
+}
+
+
